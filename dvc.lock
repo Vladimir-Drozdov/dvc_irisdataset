@@ -1,0 +1,40 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python ./prepare_data.py
+    deps:
+    - path: ./configs/prepare_data.yaml
+      hash: md5
+      md5: 27eab4f6faa0a551a648bfdaa2457c98
+      size: 123
+    - path: ./prepare_data.py
+      hash: md5
+      md5: 395b8fb0f972ef59a6e84d8e1f1199ce
+      size: 671
+    outs:
+    - path: ./data/bin_cls
+      hash: md5
+      md5: 36758ca0495afea4632640fb527a78d2.dir
+      size: 84256
+      nfiles: 2
+  train:
+    cmd: python ./train.py
+    deps:
+    - path: ./configs/train.yaml
+      hash: md5
+      md5: 9444e707e7e7302bf4c83e436f9ba026
+      size: 181
+    - path: ./data/bin_cls
+      hash: md5
+      md5: 36758ca0495afea4632640fb527a78d2.dir
+      size: 84256
+      nfiles: 2
+    - path: ./train.py
+      hash: md5
+      md5: 4938ae0bbd30e86d900611aed92aab31
+      size: 1083
+    outs:
+    - path: ./exp/cls/metrics.yaml
+      hash: md5
+      md5: 906f882fe2bb69aa82143f54206014cb
+      size: 30

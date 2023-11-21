@@ -1,0 +1,10 @@
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+
+defaults:
+  - dataset: bin_cls
+  - _self_
+
+out_dir: ./data/bin_cls

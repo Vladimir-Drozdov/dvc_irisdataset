@@ -1,0 +1,20 @@
+stages:
+  prepare_data:
+    vars:
+      - ./configs/prepare_data.yaml
+    cmd: python ./prepare_data.py
+    deps:
+    - ./configs/prepare_data.yaml
+    - ./prepare_data.py
+    outs:
+    - ${out_dir}
+  train:
+    vars:
+      - ./configs/train.yaml
+    cmd: python ./train.py
+    deps:
+    - ./configs/train.yaml
+    - ./train.py
+    - ${data_dir}
+    metrics:
+    - ${exp_dir}/metrics.yaml

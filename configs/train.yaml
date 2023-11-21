@@ -1,0 +1,14 @@
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+
+defaults:
+  - model: log_reg
+  - _self_
+
+train_test_split:
+  test_size: 0.3
+
+data_dir: ./data/bin_cls
+exp_dir: ./exp/cls
