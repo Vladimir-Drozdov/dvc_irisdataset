@@ -14,11 +14,11 @@ def main(config):
         flip_y=config.dataset.flip_y,
     )
 
-    out_dir = pathlib.Path(config.out_dir)
-    out_dir.mkdir(exist_ok=True, parents=True)
+    data_dir = pathlib.Path(config.data_dir)
+    data_dir.mkdir(exist_ok=True, parents=True)
 
-    np.save(out_dir / "features.npy", features)
-    np.save(out_dir / "target.npy", target)
+    np.save(data_dir / "features.npy", features)
+    np.save(data_dir / "target.npy", target)
 
 
 if __name__ == "__main__":

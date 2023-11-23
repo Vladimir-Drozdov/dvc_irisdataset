@@ -1,0 +1,14 @@
+model:
+  _target_: sklearn.linear_model.LogisticRegression
+  penalty: l1
+  solver: liblinear
+  C: 0.01
+dataset:
+  n_samples: 1000
+  n_features: 10
+  n_classes: 2
+  flip_y: 0.01
+train_test_split:
+  test_size: 0.3
+data_dir: ./data/bin_cls
+exp_dir: ./exp/cls

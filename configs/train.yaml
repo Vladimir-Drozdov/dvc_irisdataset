@@ -5,6 +5,7 @@ hydra:
 
 defaults:
   - model: log_reg
+  - dataset: bin_cls
   - _self_
 
 train_test_split:

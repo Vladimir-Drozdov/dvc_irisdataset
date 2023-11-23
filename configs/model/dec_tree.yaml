@@ -1,2 +1,2 @@
 _target_: 'sklearn.tree.DecisionTreeClassifier'
-max_depth: 20
+max_depth: 12
