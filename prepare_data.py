@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.datasets import make_classification
 
 
-@hydra.main(version_base="1.3", config_path="configs", config_name="prepare_data")
+@hydra.main(version_base="1.3", config_path=".", config_name="params")
 def main(config):
     features, target = make_classification(
         n_samples=config.dataset.n_samples,

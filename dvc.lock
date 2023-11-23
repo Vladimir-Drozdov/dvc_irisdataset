@@ -3,38 +3,38 @@ stages:
   prepare_data:
     cmd: python ./prepare_data.py
     deps:
-    - path: ./configs/prepare_data.yaml
+    - path: ./params.yaml
       hash: md5
-      md5: 27eab4f6faa0a551a648bfdaa2457c98
-      size: 123
+      md5: 23bfcd516fd830b900d902a5d4d544e5
+      size: 270
     - path: ./prepare_data.py
       hash: md5
-      md5: 395b8fb0f972ef59a6e84d8e1f1199ce
-      size: 671
+      md5: 18b07eecae643a10ae1a4ca3083c946f
+      size: 664
     outs:
     - path: ./data/bin_cls
       hash: md5
-      md5: 36758ca0495afea4632640fb527a78d2.dir
+      md5: 1504aced237c836206f1c9c859f5d3be.dir
       size: 84256
       nfiles: 2
   train:
     cmd: python ./train.py
     deps:
-    - path: ./configs/train.yaml
-      hash: md5
-      md5: 9444e707e7e7302bf4c83e436f9ba026
-      size: 181
     - path: ./data/bin_cls
       hash: md5
-      md5: 36758ca0495afea4632640fb527a78d2.dir
+      md5: 1504aced237c836206f1c9c859f5d3be.dir
       size: 84256
       nfiles: 2
+    - path: ./params.yaml
+      hash: md5
+      md5: 23bfcd516fd830b900d902a5d4d544e5
+      size: 270
     - path: ./train.py
       hash: md5
-      md5: 4938ae0bbd30e86d900611aed92aab31
-      size: 1083
+      md5: de3b1c6d28f36cdbfa5f04022e8da03d
+      size: 1078
     outs:
     - path: ./exp/cls/metrics.yaml
       hash: md5
-      md5: 906f882fe2bb69aa82143f54206014cb
+      md5: 27816bcf5ab535976d2b54c164f250b6
       size: 30

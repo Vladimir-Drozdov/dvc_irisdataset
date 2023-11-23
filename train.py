@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 
-@hydra.main(version_base="1.3", config_path="configs", config_name="train")
+@hydra.main(version_base="1.3", config_path=".", config_name="params")
 def main(config):
     data_dir = pathlib.Path(config.data_dir)
     exp_dir = pathlib.Path(config.exp_dir)

@@ -1,13 +1,13 @@
 stages:
   prepare_data:
-    cmd: python ./prepare_data.py -cd . -cn params
+    cmd: python ./prepare_data.py
     deps:
     - ./params.yaml
     - ./prepare_data.py
     outs:
     - ${data_dir}
   train:
-    cmd: python ./train.py -cd . -cn params
+    cmd: python ./train.py
     deps:
     - ./params.yaml
     - ./train.py
