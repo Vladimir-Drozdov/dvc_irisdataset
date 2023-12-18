@@ -5,8 +5,8 @@ stages:
     deps:
     - path: ./params.yaml
       hash: md5
-      md5: 23bfcd516fd830b900d902a5d4d544e5
-      size: 270
+      md5: 7afa9b2096b43c4cba6f931326363f27
+      size: 241
     - path: ./prepare_data.py
       hash: md5
       md5: 18b07eecae643a10ae1a4ca3083c946f
@@ -14,7 +14,7 @@ stages:
     outs:
     - path: ./data/bin_cls
       hash: md5
-      md5: 1504aced237c836206f1c9c859f5d3be.dir
+      md5: 9952c48e1b9065ee208f8e0c0e2e3813.dir
       size: 84256
       nfiles: 2
   train:
@@ -22,19 +22,19 @@ stages:
     deps:
     - path: ./data/bin_cls
       hash: md5
-      md5: 1504aced237c836206f1c9c859f5d3be.dir
+      md5: 9952c48e1b9065ee208f8e0c0e2e3813.dir
       size: 84256
       nfiles: 2
     - path: ./params.yaml
       hash: md5
-      md5: 23bfcd516fd830b900d902a5d4d544e5
-      size: 270
+      md5: 7afa9b2096b43c4cba6f931326363f27
+      size: 241
     - path: ./train.py
       hash: md5
-      md5: de3b1c6d28f36cdbfa5f04022e8da03d
-      size: 1078
+      md5: 9055fd91a8c080a866738ae7d8c65152
+      size: 3078
     outs:
     - path: ./exp/cls/metrics.yaml
       hash: md5
-      md5: 27816bcf5ab535976d2b54c164f250b6
-      size: 30
+      md5: a19d4950d4e859f3f5712684974b2756
+      size: 16
